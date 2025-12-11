@@ -184,14 +184,6 @@ type UpdateProduct = {id:number,title:string} & Partial<Omit<Product, "id" | "ti
 create → "新增商品成功：${product.title}"
 update → "更新商品成功：${product.id}"
 */
-// export  const submitProduct = (type: "create" | "update", product: CreateProduct | UpdateProduct): string => {
-//   if (type === "create") {
-//     return `新增商品成功:${(product as CreateProduct).title}` //使用斷言
-//   } else if(type === "update"){
-//  return `更新商品成功:${( product as UpdateProduct).id}`;
-//   }
- 
-// }
 export const submitProduct = (
   type: "create" | "update", 
   product: CreateProduct | UpdateProduct
