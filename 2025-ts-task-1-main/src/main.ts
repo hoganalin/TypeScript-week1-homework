@@ -117,7 +117,7 @@ export function updatePlant(input: /* TODO */ Partial<PlantBase>): /* TODO */ Re
 // --- 題目八：Record ---
 // 說明：用 Record 表示庫存表。
 // 目標：以字串鍵對應到嚴格結構。
-export type Inventory = Record< string, number>;
+export type Inventory =Record<PLANT-${string}, number>;
 export const inventory:Inventory = {
   "PLANT-1001": 42,
   "PLANT-2001": 8,
@@ -173,7 +173,7 @@ type CreateProduct = Omit<Product, "id">
 由 Product 衍生，id, title 必須有，其餘皆可選（使用 Partial 與 Omit）
 */
 // & 前面的是必須要有的 , &後面是可選的
-type UpdateProduct = {id:number,title:string} & Partial<Omit<Product, "id" | "title">>
+type UpdateProduct = {id:string,title:string} & Partial<Omit<Product, "id" | "title">>
 /*
 4️⃣ 實作函式 submitProduct(type, product)
 參數說明：
